@@ -36,6 +36,9 @@ const Header = () => {
           />
         </TouchableOpacity>
         <TouchableOpacity>
+          <View style={styles.unreadBadge}>
+            <Text style={styles.unreadBadgeText}>1</Text>
+          </View>
           <Image
             style={styles.icon}
             source={{
@@ -62,7 +65,7 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   iconContainer: {
-    color: "white !important",
+    color: "white",
     display: "inline-flex",
     flexDirection: "row",
     alignItems: "center",
@@ -72,6 +75,22 @@ const styles = StyleSheet.create({
     height: 30,
     marginLeft: 5,
     resizeMode: "contain",
+  },
+  unreadBadge: {
+    backgroundColor: "red",
+    position: "absolute",
+    left: 20,
+    bottom: 18,
+    zIndex: 100,
+    width: 25,
+    height: 18,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 25,
+  },
+  unreadBadgeText: {
+    color: "white",
+    fontSize: 12,
   },
 });
 
