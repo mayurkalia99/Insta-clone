@@ -1,16 +1,24 @@
 {
   "dependencies": {
+    "@rneui/base": "^4.0.0-rc.5",
+    "@rneui/themed": "^4.0.0-rc.5",
     "expo": "^45.0.0",
+    "path": "^0.12.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.68.2",
+    "react-native-vector-icons": "^9.2.0",
     "react-native-web": "0.17.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
   },
   "scripts": {
     "start": "expo start",
+    "build-react": "webpack",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"

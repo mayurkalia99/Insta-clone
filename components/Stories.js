@@ -27,6 +27,11 @@ const users = [
     image:
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
   },
+  {
+    name: "Batman",
+    image:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+  },
 ];
 
 const Stories = () => {
@@ -35,9 +40,9 @@ const Stories = () => {
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {users.map((user, index) => {
           return (
-            <View key={index} style={{ alignItems: "center" }}>
+            <View key={index} style={{ alignItems: "center", marginLeft: 5 }}>
               <Image style={styles.image} source={{ uri: user.image }} />
-              <Text style={{ color: "white" }}>
+              <Text style={styles.userName}>
                 {user.name.length > 10
                   ? user.name.slice(0, 9).toLowerCase() + "..."
                   : user.name.toLowerCase()}{" "}
@@ -60,7 +65,7 @@ const styles = StyleSheet.create({
     width: 70,
     resizeMode: "cover",
     borderRadius: 50,
-    marginLeft: 6,
+
     borderWidth: 3,
     borderColor: "#ff8501",
   },
@@ -69,6 +74,7 @@ const styles = StyleSheet.create({
   },
   userName: {
     color: "white",
+    marginLeft: 2,
   },
 });
 
