@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { Image } from "@rneui/base";
 
-const Header = () => {
+const Header = ({ post }) => {
   return (
     <View style={styles.container}>
-      <Text>Post Header</Text>
+      <Image source={{ uri: post.profile_picture }} />
+      <Text style={{ color: "white" }}>Post Header</Text>
     </View>
   );
 };
